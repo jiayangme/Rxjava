@@ -23,6 +23,16 @@ public class StudentApi {
             Student student = new Student("jiayang" + i, courses);
             datas.add(student);
         }
-        return Observable.from(datas); //from 方法的返回值是每个item，不是整个list
+        return Observable.from(datas); //from 方法的返回值是item，不是整个list
+    }
+
+    public static Observable<String> getRetryWhenTest() {
+        String[] datas = {"英语"};
+        return Observable.from(datas);
+    }
+
+    public static Observable<String> getSuccess() {
+        String[] datas = {"语文", "数学"};
+        return Observable.from(datas);
     }
 }

@@ -13,7 +13,7 @@ import butterknife.ButterKnife;
 import jiayang.com.rxjava.fragment.CacheFragment;
 import jiayang.com.rxjava.fragment.ElementaryFragment;
 import jiayang.com.rxjava.fragment.MapFragment;
-import jiayang.com.rxjava.fragment.TokenAdvancedFragment;
+import jiayang.com.rxjava.fragment.RetryWhenFragment;
 import jiayang.com.rxjava.fragment.TokenFragment;
 import jiayang.com.rxjava.fragment.ZipFragment;
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         return new TokenFragment();
                     case 4:
-                        return new TokenAdvancedFragment();
+                        return new RetryWhenFragment();
                     case 5:
                         return new CacheFragment();
                     default:
