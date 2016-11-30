@@ -6,7 +6,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,7 +69,6 @@ public class MapFragment extends BaseFragment {
 
     @OnClick({R.id.previousPageBt, R.id.nextPageBt})
     public void onClick(View view) {
-        subscription.unsubscribe();
         switch (view.getId()) {
             case R.id.previousPageBt:
                 swipeRefreshLayout.setRefreshing(true);

@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiFactory {
     private static ZhuangbiApi zhuangbiApi;
     private static BeautyApi beautyApi;
+    private static StudentApi studentApi;
     private static Converter.Factory convertFactory = GsonConverterFactory.create();
     private static CallAdapter.Factory callAdapterFactory = RxJavaCallAdapterFactory.create();
     private static OkHttpClient okHttpClient = new OkHttpClient();
@@ -42,5 +43,12 @@ public class ApiFactory {
             beautyApi = retrofit.create(BeautyApi.class);
         }
         return beautyApi;
+    }
+
+    public static StudentApi getStudentApi() {
+        if (studentApi == null) {
+            studentApi = new StudentApi();
+        }
+        return studentApi;
     }
 }
